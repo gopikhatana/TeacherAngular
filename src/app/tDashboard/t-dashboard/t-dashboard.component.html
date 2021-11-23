@@ -1,0 +1,114 @@
+ 
+ <header>
+ <div class="top-pan">
+  <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <ul class="list-unstyled list-inline float-left topbargovt mb-0 p-0">   
+                    <li class="list-inline-item">                    
+                          भारत सरकार<br>
+                          Government of India
+                     </li>
+                     <li class="list-inline-item">
+                          शिक्षा मंत्रालय<br>
+                          Ministry of Education
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <ul class="accblty mb-0 p-0">
+                    <li><a href="#" title="Skip to main content">Skip to main content</a></li>
+                    <li><a href="#" title="Skip to navigation">Skip to navigation</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-light bg-light1 shadow-sm">
+  <div class="container-fluid">
+    <a class="" href="#"><img src="./assets/assets/img/emblem.png"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul id="main_nav" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" routerLinkActive="active" aria-current="page" href="#">{{'tDashboard.home' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" href="#">{{'tDashboard.about' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://10.25.26.251:8385/meauth/oauth/authorize?response_type=code&user_oauth_approval=true&client_id=teacher&redirect_uri=http://10.25.26.10:4200/teacher/teacherHome&scopes=read" target="_blank" >{{'tDashboard.login' | translate}}</a>
+         <!-- <a href="" class="nav-link" routerLinkActive="active" routerLink="/teacher/teacherHome"> {{'tDashboard.login' | translate}}</a> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="defaultLang == 'en'" (click)="selectedLang('en')">EN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="defaultLang == 'hn'" (click)="selectedLang('hn')">HN</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav> 
+</header>
+
+ 
+
+<div class="container-fluid">
+  <div class="card p-4 mt-4 shadow-sm">
+      <ul class="dash">
+          <li>
+              <a href="#" title="" class="text-center">
+              <img src="./assets/assets/img/teacher2.png" alt="">
+              <br> <span>847435</span> <br>
+Total Teachers </a>
+          </li>
+          <li>
+              <a href="#" title="" class="text-center">
+              <img src="./assets/assets/img/teacher1.png" alt="">
+              <br> <span>248435</span> <br>
+Active Teachers</a>
+          </li>
+          <li>
+              <a href="#" title="" class="text-center">
+              <img src="./assets/assets/img/waiting-teachers.png" alt="">
+              <br> <span>248435</span> <br>
+Teachers waiting for Approval</a>
+          </li>
+          <li>
+              <a href="#" title="" class="text-center">
+              <img src="./assets/assets/img/management-teachers.png" alt="">
+              <br> <span>248435</span> <br>
+Management Wise Teachers</a>
+          </li>
+          <li>
+              <a href="#" title="" class="text-center">
+              <img src="./assets/assets/img/category-teachers.png" alt="">
+              <br> <span>458437</span> <br>
+Category Wise Teachers</a>
+          </li>
+          <li>
+              <a href="#" title="" class="text-center">
+              <img src="./assets/assets/img/yearwise-teachers.png" alt="">
+              <br> <span>648435</span> <br>
+Year Wise Teachers</a>
+          </li>
+          <li>
+              <a href="#" title="" class="text-center">
+              <img src="./assets/assets/img/genderwise-teachers.png" alt="">
+              <br> <span>758432</span> <br>
+Gender Wise Teachers</a>
+          </li>
+          <li>
+              <a href="#" title="" class="text-center">
+              <img src="./assets/assets/img/statewise-teachers.png" alt="">
+              <br> <span>48735</span> <br>
+State wise Teachers</a>
+          </li>
+      </ul>
+  </div>
+</div>
+

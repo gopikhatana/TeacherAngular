@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+  }
+  .IconBx i{
+      font-size:20px;
+      color: #545e7d;
+      cursor:pointer;
+  }
+  .IconBx i:hover{
+    font-size:20px;
+    color: #34c38e;
+}
+
+body{ background:#f0f0f0;}

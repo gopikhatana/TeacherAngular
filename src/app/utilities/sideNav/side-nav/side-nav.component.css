@@ -1,0 +1,15 @@
+.TeacherTitle{color:rgb(16 22 98); font-weight: 500; font-size: 17px; font-family:'roboto',sans-serif; padding:15px; margin-bottom:0px; border-bottom:1px dashed rgb(223, 223, 223);}
+.navStyle {
+    color: hsl(236deg 15% 36%) ! important;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'roboto',sans-serif;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover{ background-color: #efefef;}
+.nav-link.active,
+.nav-link.active .bxStyle  {
+    background: #efefef;
+    color: rgb(52 195 142) ! important;
+}

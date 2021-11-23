@@ -1,0 +1,379 @@
+<div class="container card">
+
+    <table id="" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Email Id</th>
+                <th>Mobile No.</th>
+                <th>Class Taught</th>
+                <th>Appointed Subject</th>
+                <th>Type of Teachers</th>
+                <th>Nature of Appointment</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>    
+            <tr class="align-middle" *ngFor="let data of teacherList; let i=index;">   
+                <td class="align-middle">{{i+1}}</td>             
+                <td class="align-middle">{{data.name}}</td>
+                <td class="align-middle">{{data.email}}</td>
+                <td class="align-middle">{{data.mobile}}</td>
+                <td class="align-middle">{{data.classTaught}}</td>
+                <td class="align-middle">{{data.apptSub}}</td>
+                <td class="align-middle">{{data.tchType}}</td>
+                <td class="align-middle">{{data.natureOfAppt}}</td>
+
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View" (click)="onViewClick(i)"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit" (click)="onEditClick(i)"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify" (click)="onVerifyClick(i)"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox" (click)="onDropboxClick(i)"></i>
+                </td>
+            </tr>
+          <!-- <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+
+            <tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr><tr >
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td class="align-middle">Tiger Nixon</td>
+                <td class="align-middle">gopi@gmail.com</td>
+                <td class="align-middle">7014931622</td>
+                <td class="align-middle">10th</td>
+                <td class="align-middle">English</td>
+                <td class="align-middle">Regular</td>
+                <td class="align-middle">Contract</td>
+                <td class="IconBx">
+                    <i class='bx bx-show bxStyle1 mr-2' title="View"></i> 
+                    <i class='bx bx-edit-alt bxStyle1 mr-2' title="edit"></i> 
+                    <i class='bx bx-message-square-check bxStyle1 mr-2' title="Verify"></i> 
+                    <i class='bx bx-box bxStyle1' title="Dropbox"></i>
+                </td>
+            </tr> --> 
+
+        </tbody>
+        <!-- <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot> -->
+    </table>
+
+<!-- <table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+</mat-paginator> -->
+</div>
+<!-- <app-teacher-entry-form
+[teacherListTest]="teacherListTest"
+></app-teacher-entry-form> -->
